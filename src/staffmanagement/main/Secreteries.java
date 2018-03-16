@@ -2,7 +2,7 @@ package staffmanagement.main;
 
 public class Secreteries extends Employee {
 int count=0;
-    public Secreteries(String id, String firstName, String lastName, String gender, String birthDate, double salary, String department) {
+    public Secreteries( String firstName, String lastName, String gender, String birthDate, double salary, String department) {
         super( firstName, lastName, gender, birthDate, salary, department);
 count++;
     }

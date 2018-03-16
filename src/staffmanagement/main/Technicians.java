@@ -2,7 +2,7 @@ package staffmanagement.main;
 
 public class Technicians extends Employee {
 int count=0;
-    public Technicians(String id, String firstName, String lastName, String gender, String birthDate, double salary, String department) {
+    public Technicians( String firstName, String lastName, String gender, String birthDate, double salary, String department) {
         super(firstName, lastName, gender, birthDate, salary, department);
     count++;
     }
