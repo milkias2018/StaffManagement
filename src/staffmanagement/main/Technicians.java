@@ -1,5 +1,7 @@
 package staffmanagement.main;
 
+import java.util.Date;
+
 public class Technicians extends Employee {
 int count=0;
     public Technicians( String firstName, String lastName, String gender, String birthDate, double salary, String department) {

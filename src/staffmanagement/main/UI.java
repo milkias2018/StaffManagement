@@ -51,8 +51,8 @@ public class UI {
 
     public static void fillDataBase() {
 
-        Programmers p1 = new Programmers("abc", "lastName", "m", "22", 121234, "Programmer");
-        Secreteries sec = new Secreteries("Bita", "Bond", "f", "730123", 29000, "Secretary");
+        Programmers p1 = new Programmers("abc", "lastName", "m", "22-10-1978", 121234, "Programmer");
+        Secreteries sec = new Secreteries("Bita", "Bond", "f", "23-01-1973", 29000, "Secretary");
         Programmers p2 = new Programmers("Lolo", "Cool", "f", "940120", 29000, "Programmer");
         Programmers p3 = new Programmers("Maliheh", "SaadatFard", "f", "800123", 29000, "Programmer");
         Secreteries sec2 = new Secreteries("Tom", "Cruise", "m", "730123", 2900000, "technician");

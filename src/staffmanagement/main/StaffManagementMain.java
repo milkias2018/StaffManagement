@@ -42,14 +42,14 @@ public class StaffManagementMain {
                                 switch (depp) {
                                     case "s":
 
-                                        Secreteries emy = new Secreteries("", "", "", "", 0, "Secretary");
+                                        Secreteries emy = new Secreteries("", "", "", null, 0, "Secretary");
                                         System.out.println("Insert employee information: ");
 
                                         EmployeeManagement.addEmployeesInfo(emy);
 
                                         break;
                                     case "p":
-                                        Programmers prog = new Programmers( "", "", "", "", 0, "Programmers");
+                                        Programmers prog = new Programmers( "", "", "",null, 0, "Programmers");
                                         System.out.println("Insert employee information: ");
 
                                         EmployeeManagement.addEmployeesInfo(prog);
@@ -57,7 +57,7 @@ public class StaffManagementMain {
                                         break;
 
                                     case "t":
-                                        Technicians tec = new Technicians( "", "", "", "", 0, "Technicians");
+                                        Technicians tec = new Technicians( "", "", "", null, 0, "Technicians");
                                         System.out.println("Insert employee information: ");
 
                                         EmployeeManagement.addEmployeesInfo(tec);

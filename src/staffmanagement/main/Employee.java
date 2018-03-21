@@ -5,16 +5,17 @@ package staffmanagement.main;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
-import static staffmanagement.main.EmployeeManagement.employee;
 
 /**
  *
  * @author User
  */
-public  abstract class Employee {
+public abstract class Employee {
 
     public int id;
     private String firstName;
@@ -25,7 +26,6 @@ public  abstract class Employee {
     private String department;
 
     public static int Count = 0;
-   
 
     static Scanner scan = new Scanner(System.in);
 
@@ -66,14 +66,14 @@ public  abstract class Employee {
     }
 
     public void setBirthDate(String birthDate) {
+
         this.birthDate = birthDate;
+
     }
 
     public String getGender() {
         return gender;
     }
-
-    
 
     public double getSalary() {
         return salary;
@@ -97,7 +97,7 @@ public  abstract class Employee {
 
     @Override
     public String toString() {
-        StringBuilder sb=new StringBuilder();
+        StringBuilder sb = new StringBuilder();
         sb.append("-------------------------------------------------------------------------------------------------------------------------------");
         sb.append("\n");
         sb.append("Record [  ID = ").append(getId()).append(", First Name = ").append(firstName).append(", Last Name = ").append(lastName).append(", Birth Date = ").append(birthDate).append(", Salary = ").append(salary).append(", Department = ").append(department).append(']');
@@ -106,12 +106,10 @@ public  abstract class Employee {
         return sb.toString();
     }
 
-    public abstract double totalBonus(int num) ;
+    public abstract double totalBonus(int num);
 
     public static int getCount() {
         return Count;
     }
-
-  
 
 }
