@@ -7,6 +7,7 @@ package staffmanagement.main;
 
 import java.util.ArrayList;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 
 import static staffmanagement.main.Employee.scan;
 
@@ -66,9 +67,23 @@ public class EmployeeManagement implements EmployeeStatstics {
                         bool = true;
                     }
                 }
-                System.out.println("Enter the birth day:");
-                emy.setBirthDate(scan.nextLine());
-
+                boolean check = true;
+                while (check) {
+                    try {
+                        System.out.println("Enter the birth day: [dd/mm/yyyy]");
+                        String birth = scan.nextLine();
+                                      
+                        if (birth.matches("([0-9]{2})/([0-9]{2})/([0-9]{4})")) {
+                            emy.setBirthDate(birth);
+                            check=false;
+                        } else {
+                            System.out.println("** Incorrect date format **");
+                            check = true;
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
                 System.out.println("Enter the salary:");
                 emy.setSalary(scan.nextDouble());
 
@@ -134,11 +149,12 @@ public class EmployeeManagement implements EmployeeStatstics {
                 }
 
             }
+            System.out.println("Employee Removed");
 
-            System.out.println("Employee removed");
         } catch (Exception e) {
             System.out.println("***********invalid input************");
         }
+
     }
 
     public static void updateEmployee() {
@@ -193,11 +209,9 @@ public class EmployeeManagement implements EmployeeStatstics {
                     }
 
                 }
-                
 
             }
-           
-        System.out.println("Employee not found !");
+
         } catch (Exception e) {
             System.out.println("*********invalid input***********");
         }
@@ -265,12 +279,12 @@ public class EmployeeManagement implements EmployeeStatstics {
 
         for (Employee employee1 : employee) {
             if (employee1.getId() == id) {
-                System.out.println( employee1);
+                System.out.println(employee1);
             }
         }
-        System.out.println("\n---------------------------------");
-        System.out.println("Employee with that id is not found");
-        System.out.println("----------------------------------");
+//        System.out.println("\n---------------------------------");
+//        System.out.println("Employee with that id is not found");
+//        System.out.println("----------------------------------");
     }
 
     public static void searchEmployeebyFirstName() {
@@ -289,9 +303,16 @@ public class EmployeeManagement implements EmployeeStatstics {
             System.out.println(employee1);
 
         }
-        System.out.println("\n----------------------------------------------");
-        System.out.println("Employee with that First name can not be found");
-        System.out.println("----------------------------------------------");
+        //        for (Employee employee1 : employee) {
+//            if(employee1.getFirstName().equalsIgnoreCase(name)){
+//        
+//        System.out.println("\n----------------------------------------------");
+//        System.out.println("Employee with that First name can not be found");
+//        System.out.println("----------------------------------------------");
+//        break;
+//        
+//        }}
+
     }
 
     public static void searchEmployeebyLastName() {
@@ -310,9 +331,9 @@ public class EmployeeManagement implements EmployeeStatstics {
             System.out.println(employee1);
 
         }
-        System.out.println("\n---------------------------------------------");
-        System.out.println("Employee with that Last name can not be found");
-        System.out.println("---------------------------------------------");
+//        System.out.println("\n---------------------------------------------");
+//        System.out.println("Employee with that Last name can not be found");
+//        System.out.println("---------------------------------------------");
     }
 
     public static void displayEmployee(Employee emp) {
@@ -322,15 +343,16 @@ public class EmployeeManagement implements EmployeeStatstics {
     }
 
     @Override
-    public double averageWage() {
+    public String averageWage() {
         double averageWage = 0;
+        decimalFormat.setMaximumFractionDigits(2);
 
         for (int i = 0; i < employee.size(); i++) {
 
             averageWage = averageWage + employee.get(i).getSalary();
 
         }
-        return (averageWage / employee.size());
+        return String.format("%.02f", (averageWage / employee.size()));
     }
 
     @Override
