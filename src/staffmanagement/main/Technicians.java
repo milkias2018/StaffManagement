@@ -32,16 +32,12 @@ int count=0;
     public double totalBonus(int  bonusPoint) {
         
         
-        if (bonusPoint < 20){
-            
+        if (bonusPoint < 20){            
+            return bonusPoint*1000 ;        }
+        else if ( bonusPoint >= 20 && bonusPoint <= 30 ){            
             return bonusPoint*1000 ;
         }
-        else if ( bonusPoint >= 20 && bonusPoint <= 30 ){
-            
-            return bonusPoint*1000 ;
-        }
-        if (bonusPoint> 30 ){
-            
+        if (bonusPoint> 30 ){            
             return bonusPoint*1000;
         }
 
