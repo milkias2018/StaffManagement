@@ -17,11 +17,13 @@ import static staffmanagement.main.Employee.scan;
  */
 public class EmployeeManagement implements EmployeeStatstics {
 
+    
+    public static ArrayList<Employee> employee = new ArrayList<Employee>();
+    public static DecimalFormat decimalFormat = new DecimalFormat();
+    
     public int countFemaleGender = 0;
     public int countMaleGender = 0;
 
-    public static ArrayList<Employee> employee = new ArrayList();
-    public static DecimalFormat decimalFormat = new DecimalFormat();
 
     public static void print() {
         for (Employee employee1 : employee) {

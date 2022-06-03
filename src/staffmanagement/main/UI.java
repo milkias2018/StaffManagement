@@ -57,7 +57,7 @@ public class UI {
         Programmers p3 = new Programmers("Maliheh", "SaadatFard", "f", "800123", 29000, "Programmer");
         Secreteries sec2 = new Secreteries("Tom", "Cruise", "m", "730123", 2900000, "technician");
         Technicians tec = new Technicians("ABC", "Bond", "m", "730113", 5344000, "technician");
-        Technicians tec2 = new Technicians("Linda", "May", "f", "900123", 34000, "technician");
+        Technicians tec2 = new Technicians("Linda", "August", "f", "900123", 34000, "technician");
         Programmers p4 = new Programmers("George", "Nilsen", "m", "850123", 29000, "Programmer");
 
         EmployeeManagement.employee.add(p1);
