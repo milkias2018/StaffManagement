@@ -13,7 +13,7 @@ public class UI {
 
     public static void mainMenue() {
         System.out.println("*********");
-        System.out.println("Main Menu");
+        System.out.println("MAIN MENU");
         System.out.println("*********");
 
         System.out.println("Press 1 for Employee Management(Add,update,delete): ");
