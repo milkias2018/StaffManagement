@@ -8,9 +8,7 @@ public class StaffManagementMain {
 
     public static void main(String[] args) {
 
-        EmployeeManagement stats = new EmployeeManagement();
-       
-
+        EmployeeManagement stats = new EmployeeManagement();     
         UI.fillDataBase();
 
         boolean runagain = true;
@@ -42,10 +40,9 @@ public class StaffManagementMain {
                                 switch (depp) {
                                     case "s":
 
-                                        Secreteries emy = new Secreteries("", "", "", null, 0, "Secretary");
+                                        Secreteries emma = new Secreteries("", "", "", null, 0, "Secretary");
                                         System.out.println("Insert employee information: ");
-
-                                        EmployeeManagement.addEmployeesInfo(emy);
+                                        EmployeeManagement.addEmployeesInfo(emma);
 
                                         break;
                                     case "p":
